@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51CEF6BC230BED2900C509E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6BB230BED2900C509E3 /* AppDelegate.swift */; };
+		51CEF6BE230BED2900C509E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6BD230BED2900C509E3 /* ViewController.swift */; };
+		51CEF6C1230BED2900C509E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CEF6BF230BED2900C509E3 /* Main.storyboard */; };
+		51CEF6C3230BED2A00C509E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CEF6C2230BED2A00C509E3 /* Assets.xcassets */; };
+		51CEF6C6230BED2A00C509E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CEF6C4230BED2A00C509E3 /* LaunchScreen.storyboard */; };
+		51CEF6D1230BED2A00C509E3 /* LQPhotoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6D0230BED2A00C509E3 /* LQPhotoManagerTests.swift */; };
+		51CEF6DC230BED2A00C509E3 /* LQPhotoManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6DB230BED2A00C509E3 /* LQPhotoManagerUITests.swift */; };
+		51CEF6EB230BEDD400C509E3 /* LQPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6EA230BEDD400C509E3 /* LQPhotoManager.swift */; };
+		51CEF6ED230BF5D600C509E3 /* PhotoAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6EC230BF5D600C509E3 /* PhotoAuthorization.swift */; };
+		51CEF6F4230BFF1400C509E3 /* PhotoChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6F3230BFF1400C509E3 /* PhotoChange.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51CEF6CD230BED2A00C509E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51CEF6B0230BED2900C509E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CEF6B7230BED2900C509E3;
+			remoteInfo = LQPhotoManager;
+		};
+		51CEF6D8230BED2A00C509E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51CEF6B0230BED2900C509E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CEF6B7230BED2900C509E3;
+			remoteInfo = LQPhotoManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		51CEF6B8230BED2900C509E3 /* LQPhotoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LQPhotoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CEF6BB230BED2900C509E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		51CEF6BD230BED2900C509E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51CEF6C0230BED2900C509E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		51CEF6C2230BED2A00C509E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51CEF6C5230BED2A00C509E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		51CEF6C7230BED2A00C509E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CEF6CC230BED2A00C509E3 /* LQPhotoManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LQPhotoManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CEF6D0230BED2A00C509E3 /* LQPhotoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQPhotoManagerTests.swift; sourceTree = "<group>"; };
+		51CEF6D2230BED2A00C509E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CEF6D7230BED2A00C509E3 /* LQPhotoManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LQPhotoManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CEF6DB230BED2A00C509E3 /* LQPhotoManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQPhotoManagerUITests.swift; sourceTree = "<group>"; };
+		51CEF6DD230BED2A00C509E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CEF6EA230BEDD400C509E3 /* LQPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQPhotoManager.swift; sourceTree = "<group>"; };
+		51CEF6EC230BF5D600C509E3 /* PhotoAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAuthorization.swift; sourceTree = "<group>"; };
+		51CEF6F3230BFF1400C509E3 /* PhotoChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoChange.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51CEF6B5230BED2900C509E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CEF6C9230BED2A00C509E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CEF6D4230BED2A00C509E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51CEF6AF230BED2900C509E3 = {
+			isa = PBXGroup;
+			children = (
+				51CEF6BA230BED2900C509E3 /* LQPhotoManager */,
+				51CEF6CF230BED2A00C509E3 /* LQPhotoManagerTests */,
+				51CEF6DA230BED2A00C509E3 /* LQPhotoManagerUITests */,
+				51CEF6B9230BED2900C509E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51CEF6B9230BED2900C509E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51CEF6B8230BED2900C509E3 /* LQPhotoManager.app */,
+				51CEF6CC230BED2A00C509E3 /* LQPhotoManagerTests.xctest */,
+				51CEF6D7230BED2A00C509E3 /* LQPhotoManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51CEF6BA230BED2900C509E3 /* LQPhotoManager */ = {
+			isa = PBXGroup;
+			children = (
+				51CEF6E9230BED3900C509E3 /* Classes */,
+				51CEF6BB230BED2900C509E3 /* AppDelegate.swift */,
+				51CEF6BD230BED2900C509E3 /* ViewController.swift */,
+				51CEF6BF230BED2900C509E3 /* Main.storyboard */,
+				51CEF6C2230BED2A00C509E3 /* Assets.xcassets */,
+				51CEF6C4230BED2A00C509E3 /* LaunchScreen.storyboard */,
+				51CEF6C7230BED2A00C509E3 /* Info.plist */,
+			);
+			path = LQPhotoManager;
+			sourceTree = "<group>";
+		};
+		51CEF6CF230BED2A00C509E3 /* LQPhotoManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				51CEF6D0230BED2A00C509E3 /* LQPhotoManagerTests.swift */,
+				51CEF6D2230BED2A00C509E3 /* Info.plist */,
+			);
+			path = LQPhotoManagerTests;
+			sourceTree = "<group>";
+		};
+		51CEF6DA230BED2A00C509E3 /* LQPhotoManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				51CEF6DB230BED2A00C509E3 /* LQPhotoManagerUITests.swift */,
+				51CEF6DD230BED2A00C509E3 /* Info.plist */,
+			);
+			path = LQPhotoManagerUITests;
+			sourceTree = "<group>";
+		};
+		51CEF6E9230BED3900C509E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				51CEF6EA230BEDD400C509E3 /* LQPhotoManager.swift */,
+				51CEF6EC230BF5D600C509E3 /* PhotoAuthorization.swift */,
+				51CEF6F3230BFF1400C509E3 /* PhotoChange.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51CEF6B7230BED2900C509E3 /* LQPhotoManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CEF6E0230BED2A00C509E3 /* Build configuration list for PBXNativeTarget "LQPhotoManager" */;
+			buildPhases = (
+				51CEF6B4230BED2900C509E3 /* Sources */,
+				51CEF6B5230BED2900C509E3 /* Frameworks */,
+				51CEF6B6230BED2900C509E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LQPhotoManager;
+			productName = LQPhotoManager;
+			productReference = 51CEF6B8230BED2900C509E3 /* LQPhotoManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51CEF6CB230BED2A00C509E3 /* LQPhotoManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CEF6E3230BED2A00C509E3 /* Build configuration list for PBXNativeTarget "LQPhotoManagerTests" */;
+			buildPhases = (
+				51CEF6C8230BED2A00C509E3 /* Sources */,
+				51CEF6C9230BED2A00C509E3 /* Frameworks */,
+				51CEF6CA230BED2A00C509E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51CEF6CE230BED2A00C509E3 /* PBXTargetDependency */,
+			);
+			name = LQPhotoManagerTests;
+			productName = LQPhotoManagerTests;
+			productReference = 51CEF6CC230BED2A00C509E3 /* LQPhotoManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		51CEF6D6230BED2A00C509E3 /* LQPhotoManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CEF6E6230BED2A00C509E3 /* Build configuration list for PBXNativeTarget "LQPhotoManagerUITests" */;
+			buildPhases = (
+				51CEF6D3230BED2A00C509E3 /* Sources */,
+				51CEF6D4230BED2A00C509E3 /* Frameworks */,
+				51CEF6D5230BED2A00C509E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51CEF6D9230BED2A00C509E3 /* PBXTargetDependency */,
+			);
+			name = LQPhotoManagerUITests;
+			productName = LQPhotoManagerUITests;
+			productReference = 51CEF6D7230BED2A00C509E3 /* LQPhotoManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51CEF6B0230BED2900C509E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = williamoneilchina;
+				TargetAttributes = {
+					51CEF6B7230BED2900C509E3 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					51CEF6CB230BED2A00C509E3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 51CEF6B7230BED2900C509E3;
+					};
+					51CEF6D6230BED2A00C509E3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 51CEF6B7230BED2900C509E3;
+					};
+				};
+			};
+			buildConfigurationList = 51CEF6B3230BED2900C509E3 /* Build configuration list for PBXProject "LQPhotoManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51CEF6AF230BED2900C509E3;
+			productRefGroup = 51CEF6B9230BED2900C509E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51CEF6B7230BED2900C509E3 /* LQPhotoManager */,
+				51CEF6CB230BED2A00C509E3 /* LQPhotoManagerTests */,
+				51CEF6D6230BED2A00C509E3 /* LQPhotoManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51CEF6B6230BED2900C509E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CEF6C6230BED2A00C509E3 /* LaunchScreen.storyboard in Resources */,
+				51CEF6C3230BED2A00C509E3 /* Assets.xcassets in Resources */,
+				51CEF6C1230BED2900C509E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CEF6CA230BED2A00C509E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CEF6D5230BED2A00C509E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51CEF6B4230BED2900C509E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CEF6BE230BED2900C509E3 /* ViewController.swift in Sources */,
+				51CEF6EB230BEDD400C509E3 /* LQPhotoManager.swift in Sources */,
+				51CEF6ED230BF5D600C509E3 /* PhotoAuthorization.swift in Sources */,
+				51CEF6BC230BED2900C509E3 /* AppDelegate.swift in Sources */,
+				51CEF6F4230BFF1400C509E3 /* PhotoChange.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CEF6C8230BED2A00C509E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CEF6D1230BED2A00C509E3 /* LQPhotoManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CEF6D3230BED2A00C509E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CEF6DC230BED2A00C509E3 /* LQPhotoManagerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51CEF6CE230BED2A00C509E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CEF6B7230BED2900C509E3 /* LQPhotoManager */;
+			targetProxy = 51CEF6CD230BED2A00C509E3 /* PBXContainerItemProxy */;
+		};
+		51CEF6D9230BED2A00C509E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CEF6B7230BED2900C509E3 /* LQPhotoManager */;
+			targetProxy = 51CEF6D8230BED2A00C509E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		51CEF6BF230BED2900C509E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51CEF6C0230BED2900C509E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		51CEF6C4230BED2A00C509E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51CEF6C5230BED2A00C509E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		51CEF6DE230BED2A00C509E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51CEF6DF230BED2A00C509E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51CEF6E1230BED2A00C509E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51CEF6E2230BED2A00C509E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51CEF6E4230BED2A00C509E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LQPhotoManager.app/LQPhotoManager";
+			};
+			name = Debug;
+		};
+		51CEF6E5230BED2A00C509E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LQPhotoManager.app/LQPhotoManager";
+			};
+			name = Release;
+		};
+		51CEF6E7230BED2A00C509E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LQPhotoManager;
+			};
+			name = Debug;
+		};
+		51CEF6E8230BED2A00C509E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQPhotoManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LQPhotoManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51CEF6B3230BED2900C509E3 /* Build configuration list for PBXProject "LQPhotoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CEF6DE230BED2A00C509E3 /* Debug */,
+				51CEF6DF230BED2A00C509E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CEF6E0230BED2A00C509E3 /* Build configuration list for PBXNativeTarget "LQPhotoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CEF6E1230BED2A00C509E3 /* Debug */,
+				51CEF6E2230BED2A00C509E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CEF6E3230BED2A00C509E3 /* Build configuration list for PBXNativeTarget "LQPhotoManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CEF6E4230BED2A00C509E3 /* Debug */,
+				51CEF6E5230BED2A00C509E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CEF6E6230BED2A00C509E3 /* Build configuration list for PBXNativeTarget "LQPhotoManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CEF6E7230BED2A00C509E3 /* Debug */,
+				51CEF6E8230BED2A00C509E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51CEF6B0230BED2900C509E3 /* Project object */;
+}
