@@ -15,8 +15,10 @@
 		51CEF6D1230BED2A00C509E3 /* LQPhotoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6D0230BED2A00C509E3 /* LQPhotoManagerTests.swift */; };
 		51CEF6DC230BED2A00C509E3 /* LQPhotoManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6DB230BED2A00C509E3 /* LQPhotoManagerUITests.swift */; };
 		51CEF6EB230BEDD400C509E3 /* LQPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6EA230BEDD400C509E3 /* LQPhotoManager.swift */; };
-		51CEF6ED230BF5D600C509E3 /* PhotoAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6EC230BF5D600C509E3 /* PhotoAuthorization.swift */; };
-		51CEF6F4230BFF1400C509E3 /* PhotoChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6F3230BFF1400C509E3 /* PhotoChange.swift */; };
+		51CEF6ED230BF5D600C509E3 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEF6EC230BF5D600C509E3 /* AuthorizationManager.swift */; };
+		51F52CAA230CF2E20076346C /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F52CA9230CF2E20076346C /* PhotoTableViewController.swift */; };
+		51F52CB0230D11260076346C /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51F52CAF230D11260076346C /* image.jpg */; };
+		51F52CB4230D30F30076346C /* LQImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F52CB3230D30F30076346C /* LQImagePickerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		51CEF6DB230BED2A00C509E3 /* LQPhotoManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQPhotoManagerUITests.swift; sourceTree = "<group>"; };
 		51CEF6DD230BED2A00C509E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51CEF6EA230BEDD400C509E3 /* LQPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQPhotoManager.swift; sourceTree = "<group>"; };
-		51CEF6EC230BF5D600C509E3 /* PhotoAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAuthorization.swift; sourceTree = "<group>"; };
-		51CEF6F3230BFF1400C509E3 /* PhotoChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoChange.swift; sourceTree = "<group>"; };
+		51CEF6EC230BF5D600C509E3 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		51F52CA9230CF2E20076346C /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		51F52CAF230D11260076346C /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		51F52CB3230D30F30076346C /* LQImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQImagePickerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,11 @@
 		51CEF6BA230BED2900C509E3 /* LQPhotoManager */ = {
 			isa = PBXGroup;
 			children = (
+				51F52CAF230D11260076346C /* image.jpg */,
 				51CEF6E9230BED3900C509E3 /* Classes */,
 				51CEF6BB230BED2900C509E3 /* AppDelegate.swift */,
 				51CEF6BD230BED2900C509E3 /* ViewController.swift */,
+				51F52CA9230CF2E20076346C /* PhotoTableViewController.swift */,
 				51CEF6BF230BED2900C509E3 /* Main.storyboard */,
 				51CEF6C2230BED2A00C509E3 /* Assets.xcassets */,
 				51CEF6C4230BED2A00C509E3 /* LaunchScreen.storyboard */,
@@ -136,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				51CEF6EA230BEDD400C509E3 /* LQPhotoManager.swift */,
-				51CEF6EC230BF5D600C509E3 /* PhotoAuthorization.swift */,
-				51CEF6F3230BFF1400C509E3 /* PhotoChange.swift */,
+				51CEF6EC230BF5D600C509E3 /* AuthorizationManager.swift */,
+				51F52CB3230D30F30076346C /* LQImagePickerManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 				51CEF6C6230BED2A00C509E3 /* LaunchScreen.storyboard in Resources */,
 				51CEF6C3230BED2A00C509E3 /* Assets.xcassets in Resources */,
 				51CEF6C1230BED2900C509E3 /* Main.storyboard in Resources */,
+				51F52CB0230D11260076346C /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,11 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F52CB4230D30F30076346C /* LQImagePickerManager.swift in Sources */,
 				51CEF6BE230BED2900C509E3 /* ViewController.swift in Sources */,
 				51CEF6EB230BEDD400C509E3 /* LQPhotoManager.swift in Sources */,
-				51CEF6ED230BF5D600C509E3 /* PhotoAuthorization.swift in Sources */,
+				51CEF6ED230BF5D600C509E3 /* AuthorizationManager.swift in Sources */,
 				51CEF6BC230BED2900C509E3 /* AppDelegate.swift in Sources */,
-				51CEF6F4230BFF1400C509E3 /* PhotoChange.swift in Sources */,
+				51F52CAA230CF2E20076346C /* PhotoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,12 +461,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LQPhotoManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManager;
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.PhotoManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,12 +480,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LQPhotoManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.LQPhotoManager;
+				PRODUCT_BUNDLE_IDENTIFIER = williamoneichina.PhotoManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

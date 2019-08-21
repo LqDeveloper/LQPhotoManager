@@ -2,8 +2,8 @@
 //  LQPhotoManager.swift
 //  LQPhotoManager
 //
-//  Created by Quan Li on 2019/8/20.
-//  Copyright © 2019 williamoneilchina. All rights reserved.
+//  Created by Li on 2019/8/20.
+//  Copyright © 2019 . All rights reserved.
 //
 
 /*
@@ -103,14 +103,59 @@
  */
 import Foundation
 import Photos
-open class LQPhotoManager {
-    public static let shared = LQPhotoManager()
-    private init(){}
+open class LQPhotoManager:NSObject {
+    public weak var delegate:LQPhotoManagerDelegate?
+    public init(photoDelegate:LQPhotoManagerDelegate?){
+        delegate = photoDelegate
+        super.init()
+        PHPhotoLibrary.shared().register(self)
+    }
+    
+    public func unregisterChangeObserver(){
+        PHPhotoLibrary.shared().unregisterChangeObserver(self)
+    }
+
+    public func requestPhotosData(){
+        AuthorizationManager.checkPhotoAuthorization { (status) in
+            self.notifyObserver(status: status)
+        }
+    }
+}
+
+
+
+/*
+ 可以使用PHChnage下面的方法去监听发生的变化
+ public func changeDetails<T>(for fetchResult: PHFetchResult<T>) -> PHFetchResultChangeDetails<T>? where T : PHObject
+ 
+ 通过PHFetchResultChangeDetails的下面的发生的变化
+ //
+ open var fetchResultBeforeChanges: PHFetchResult<ObjectType> { get }
+ 
+ open var fetchResultAfterChanges: PHFetchResult<ObjectType> { get }
+ */
+public protocol LQPhotoManagerDelegate:AnyObject{
+    func photosDataDidChange(changeInstance: PHChange)
+    func photosAuthorizationChange(status:PhotoAuthorizationStatus)
+}
+
+extension LQPhotoManager{
+    /// 获取相册
+    ///
+    /// - Parameters:
+    ///   - type: 相册类型
+    ///   - subtype: 哪种类型拍摄的
+    ///   - options: 筛选条件
+    public class func getAlbum(with type: PHAssetCollectionType, subtype: PHAssetCollectionSubtype, options: PHFetchOptions? = nil)-> PHFetchResult<PHAssetCollection>{
+        return PHAssetCollection.fetchAssetCollections(with: PHAssetCollectionType.album, subtype: PHAssetCollectionSubtype.any, options: options)
+    }
+    
+    
     
     /// 创建相册
     ///
     /// - Parameter albumName: 相册的名字
-    open func createAlbum(albumName:String?) {
+    public class  func createAlbum(albumName:String?) {
         guard let name = albumName else{
             return
         }
@@ -126,8 +171,7 @@ open class LQPhotoManager {
     /// 删除多个相册
     ///
     /// - Parameter albumsToBeDeleted: [PHAssetCollection]?
-    open func deleteAlbums(albumsToBeDeleted: [PHAssetCollection]?) {
-        
+    public class func deleteAlbums(albumsToBeDeleted: [PHAssetCollection]?) {
         guard let albums = albumsToBeDeleted else {
             return
         }
@@ -140,12 +184,11 @@ open class LQPhotoManager {
         }
     }
     
-    
     /// 获取相册中的照片
     ///
     /// - Parameter album: PHAssetCollection
     /// - Returns: PHFetchResult<PHAsset>
-    open func getPhotosFromAlbum(album:PHAssetCollection?) -> PHFetchResult<PHAsset>? {
+    public class func getPhotosFromAlbum(album:PHAssetCollection?) -> PHFetchResult<PHAsset>? {
         guard let al = album else {
             return nil
         }
@@ -159,7 +202,7 @@ open class LQPhotoManager {
     /// - Parameters:
     ///   - image: UIImage
     ///   - toAlbum: PHAssetCollection
-    open func addImage(image:UIImage?,toAlbum:PHAssetCollection?){
+    public class func addImage(image:UIImage?,toAlbum:PHAssetCollection?){
         guard let img = image,let album = toAlbum  else {
             return
         }
@@ -180,10 +223,11 @@ open class LQPhotoManager {
     /// 将照片从相册中删除
     ///
     /// - Parameter photoAssets: [PHAsset]
-    open func deleteImagesFromAlbum(photoAssets:[PHAsset]?){
+    public class func deleteImagesFromAlbum(photoAssets:[PHAsset]?){
         guard let photos = photoAssets else {
             return
         }
+        
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.deleteAssets(photos as NSFastEnumeration)
         }) { (success, error) in
@@ -201,7 +245,7 @@ open class LQPhotoManager {
     ///   - imageSize:  图片尺寸
     ///   - contentMode: 拉伸模式
     ///   - resultHandler: 转换成功后的回调
-    open func changePHAssetToImage(photoAsset:PHAsset?,contentMode:PHImageContentMode = PHImageContentMode.aspectFill,resultHandler: @escaping (UIImage?, [AnyHashable : Any]?) -> Void) {
+    public class func changePHAssetToImage(photoAsset:PHAsset?,contentMode:PHImageContentMode = PHImageContentMode.aspectFill,resultHandler: @escaping (UIImage?, [AnyHashable : Any]?) -> Void) {
         guard let photoA = photoAsset else {
             return
         }
@@ -209,6 +253,21 @@ open class LQPhotoManager {
         let imageManager =  PHImageManager.default()
         imageManager.requestImage(for: photoA, targetSize: CGSize.init(width: photoA.pixelWidth, height: photoA.pixelHeight), contentMode: contentMode, options: nil) { (image, imageInfo) in
             resultHandler(image,imageInfo)
+        }
+    }
+    
+    internal func notifyObserver(status:PhotoAuthorizationStatus){
+        DispatchQueue.main.async {
+            self.delegate?.photosAuthorizationChange(status: status)
+        }
+    }
+}
+
+
+extension LQPhotoManager:PHPhotoLibraryChangeObserver{
+    public func photoLibraryDidChange(_ changeInstance: PHChange) {
+        DispatchQueue.main.async {
+            self.delegate?.photosDataDidChange(changeInstance: changeInstance)
         }
     }
 }

@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>添加图片</string>
+	<string>写入图片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>读取图片</string>
 	<key>UILaunchStoryboardName</key>
